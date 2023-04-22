@@ -1,0 +1,21 @@
+// คััดลอกไปใช้งานได้เลยยครับ ฝากกดติดตามด้วยครับ//
+
+int ultrasonic = A0;
+float val = 0;
+float cm;
+String data;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ultrasonic,INPUT);
+
+}
+
+void loop() {
+ val = analogRead(ultrasonic);
+ cm = val/10;
+ data = String(50 - cm);
+ Serial.println(50 - cm);
+ delay(1000);
+
+}
